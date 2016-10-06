@@ -1,7 +1,6 @@
 {% extends 'blog/base.html' %}
 
-{% block content %}
-    {% for post in posts %}
+    {% block content %}
         <div class="post">
             <h1><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <div class="date">
@@ -9,6 +8,4 @@
             </div><br /><br />
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
-    {% endfor %}
-{% endblock content %}
-            
+    {% endblock %}
